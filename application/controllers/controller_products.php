@@ -15,7 +15,10 @@ class Controller_Products extends Controller
         $this->view->generate('products/list_view.php', 'template_view.php',
             array(
                 'title' => 'Список товаров',
-                'products' => $this->model->get_data()
+                'products' => $this->model->get_data(),
+                'is_right_sidebar' => false,
+                'is_photo_slider' => false,
+                'is_slider' => false
             )
         );
     }
