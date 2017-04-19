@@ -4,10 +4,7 @@ class Model_Products extends Model{
 
     public function get_data(){
 
-        $sql = "SELECT products.id, products.title, products.price, products.mark,
-                products.description, category_products.title as category_name
-                FROM products
-                LEFT JOIN category_products ON products.id_catalog = category_products.id";
+        $sql = "SELECT id, title FROM products";
 
         $result = $this->_pdo->query($sql);
 
@@ -15,6 +12,7 @@ class Model_Products extends Model{
             return $result;
         }
         $records = $result->fetchAll(PDO::FETCH_ASSOC);
+        var_dump($records);
         return $records;
 
     }
