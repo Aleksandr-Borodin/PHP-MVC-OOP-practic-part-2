@@ -8,45 +8,30 @@
   <script src="/js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
 </head>
 <body>
-
-<!--[if lt IE 7]>
-<p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
-<![endif]-->
-
-<div class = "wrapper">
+  <div class = "wrapper">
     <div class = "maincontent">
-        <div class="container">
-
-            <?php require_once '_chunks/header.php'; ?>
-
-            <?php if($is_slider): ?>
-                <?php require_once '_chunks/slider.php'; ?>
-            <?php endif; ?>
-
-            <?php require_once '_chunks/menu.php'; ?>
-
-            <?php if($is_photo_slider): ?>
-                <?php require_once '_chunks/slider-photo.php'; ?>
-            <?php endif; ?>
-
-            <div class="content_area main_page">
-                <div class="content_area_right">
-                    <?php require_once '_chunks/left_navbar.php'; ?>
-                </div>
-
-
-                <div class="content_area_left">
-                    <div class="features">
-
-                        <?php include 'application/views/'.$content_view; ?>
-
-                        <?php if($is_right_sidebar): ?>
-                            <?php require_once '_chunks/right_sidebar.php'; ?>
-                        <?php endif; ?>
-                    </div>
-
-                </div>
+      <div class="container">
+        <?php require_once '_chunks/header.php'; ?>
+        <?php if($is_slider): ?>
+          <?php require_once '_chunks/slider.php'; ?>
+        <?php endif; ?>
+        <?php require_once '_chunks/menu.php'; ?>
+        <?php if($is_photo_slider): ?>
+          <?php require_once '_chunks/slider-photo.php'; ?>
+         <?php endif; ?>
+        <div class="content_area main_page">
+          <div class="content_area_right">
+            <?php require_once '_chunks/left_navbar.php'; ?>
+          </div>
+          <div class="content_area_left">
+            <div class="features">
+              <?php include 'application/views/'.$content_view; ?>
+              <?php if($is_right_sidebar): ?>
+                <?php require_once '_chunks/right_sidebar.php'; ?>
+              <?php endif; ?>
             </div>
+          </div>
+         </div>
 
 
             <section class="carousel">
