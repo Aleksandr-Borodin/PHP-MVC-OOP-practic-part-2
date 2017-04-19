@@ -9,16 +9,16 @@ class Route {
     $routes = explode('/', $_SERVER['REQUEST_URI']);
     // получаем имя контроллера, если оно есть;
     // Изменены индексы массива (+1) для удобства работы с xampp и smartgit;
-    if (!empty($routes[2])) {
-      $controller_name = $routes[2];
+    if (!empty($routes[1])) {
+      $controller_name = $routes[1];
     }
     // тоже самое с именем экшена, если нету, то параметр по умолчанию;
-    if (!empty($routes[3])) {
-      $action_name = $routes[3];
+    if (!empty($routes[2])) {
+      $action_name = $routes[2];
     }
     // Параметры;
-    if(!empty(array_slice($routes, 4))){
-      $params = array_slice($routes, 4);
+    if(!empty(array_slice($routes, 3))){
+      $params = array_slice($routes, 3);
     }
     // добавляем префиксы;
     $model_name = 'Model_' . $controller_name;
